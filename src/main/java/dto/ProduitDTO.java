@@ -8,12 +8,12 @@ public class ProduitDTO {
     private String nom_produit;
 
 
-    public ProduitDTO (Integer qte, Integer id, Integer seuil,String n ) {
+    public ProduitDTO(Integer qte, Integer id, Integer seuil, String n) {
         super();
-        stock=qte;
-        id_produit=id;
-        seuilRupture=seuil;
-        nom_produit=n;
+        stock = qte;
+        id_produit = id;
+        seuilRupture = seuil;
+        nom_produit = n;
     }
 
     public Integer getStock() {
@@ -21,7 +21,7 @@ public class ProduitDTO {
     }
 
     public void setStock(Integer stock) {
-        Integer oldValue=this.stock;
+        Integer oldValue = this.stock;
         this.stock = stock;
     }
 
@@ -38,7 +38,7 @@ public class ProduitDTO {
     }
 
     public void setSeuilRupture(Integer seuilRupture) {
-        Integer oldValue=this.seuilRupture;
+        Integer oldValue = this.seuilRupture;
         this.seuilRupture = seuilRupture;
 
     }
@@ -52,7 +52,7 @@ public class ProduitDTO {
     }
 
     public String toString() {
-        return (" Nom :" + nom_produit +" IdProduit :" + id_produit +" stock :" + stock + " seuil :" +seuilRupture);
+        return (" Nom :" + nom_produit + " IdProduit :" + id_produit + " stock :" + stock + " seuil :" + seuilRupture);
     }
 
 }

@@ -1,6 +1,6 @@
 package dto;
 
-public class CommandDTO {
+public class CommandeDTO {
 
     private Integer id_commande;
     private ClientDTO client;
@@ -9,13 +9,13 @@ public class CommandDTO {
     private String dateCom;
     private String etatCom;
 
-    public CommandDTO (Integer id_commande, ClientDTO client, ProduitDTO produit, Integer qte, String dateCom, String etatCom){
-        this.id_commande=id_commande;
-        this.client=client;
-        this.produit=produit;
-        this.dateCom=dateCom;
-        this.etatCom=etatCom;
-        this.qte=qte;
+    public CommandeDTO(Integer id_commande, ClientDTO client, ProduitDTO produit, Integer qte, String dateCom, String etatCom) {
+        this.id_commande = id_commande;
+        this.client = client;
+        this.produit = produit;
+        this.dateCom = dateCom;
+        this.etatCom = etatCom;
+        this.qte = qte;
     }
 
     public ClientDTO getClient() {
@@ -38,15 +38,16 @@ public class CommandDTO {
         return qte;
     }
 
+    public void setQte(Integer qte) {
+        this.qte = qte;
+    }
+
     public Integer getId_commande() {
         return id_commande;
     }
 
     public void setId_commande(Integer id_commande) {
         this.id_commande = id_commande;
-    }
-    public void setQte(Integer qte) {
-        this.qte = qte;
     }
 
     public String getDateCom() {

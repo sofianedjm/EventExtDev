@@ -2,12 +2,22 @@ package dto;
 
 public class CommandeReapproDTO {
 
+    final private Integer id_reappro;
     private Integer qte;
     private ProduitDTO produit;
     private String dateCommande;
     private String commentaire;
     private String etat;
-    final private Integer id_reappro;
+
+    public CommandeReapproDTO(Integer id_reappro, Integer qte, ProduitDTO p, String date, String c) {
+        this.id_reappro = id_reappro;
+        this.qte = qte;
+        this.produit = p;
+        this.dateCommande = date;
+        this.commentaire = c;
+        this.etat = "créée";
+
+    }
 
     public String getEtat() {
         return etat;
@@ -15,16 +25,6 @@ public class CommandeReapproDTO {
 
     public void setEtat(String etat) {
         this.etat = etat;
-    }
-
-    public CommandeReapproDTO(Integer id_reappro, Integer qte, ProduitDTO p, String date, String c) {
-        this.id_reappro=id_reappro;
-        this.qte=qte;
-        this.produit=p;
-        this.dateCommande=date;
-        this.commentaire=c;
-        this.etat="créée";
-
     }
 
     public Integer getId_reappro() {
@@ -65,6 +65,6 @@ public class CommandeReapproDTO {
     }
 
     public String toString() {
-        return ("Id CommandeReappro :" + id_reappro +" Nom :" + produit.getNom_produit() +" qte :" + qte + " date :" +dateCommande +" commentaire :" +commentaire );
+        return ("Id CommandeReappro :" + id_reappro + " Nom :" + produit.getNom_produit() + " qte :" + qte + " date :" + dateCommande + " commentaire :" + commentaire);
     }
 }
